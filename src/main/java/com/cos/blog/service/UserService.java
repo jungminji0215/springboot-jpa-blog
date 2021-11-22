@@ -20,11 +20,11 @@ public class UserService {
 	public int 회원가입(User user) {
 		try {
 			userRepository.save(user);
-			return 1;
+			return 1; // 정상이면 1 리턴
 		}catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("UserService : 회원가입() :" + e.getMessage());
 		}
-		return -1;		
+		return -1;	 // save 하나가 오류나면 -1 리턴
 	}
 }

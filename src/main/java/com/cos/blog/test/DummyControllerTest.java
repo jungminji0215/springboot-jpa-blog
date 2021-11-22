@@ -32,7 +32,7 @@ public class DummyControllerTest {
 	// 즉, userRepository 얘도 메모리에 같이 올라간다는 뜻
 	// @Autowired는 스프링이 관리하는 UserRepository 타입의 객체가 있으면 userRepository 여기에 넣어준다
 	@Autowired // 의존성 주입(DI)
-	private UserRepository userRepository;
+	private UserRepository userRepository; // 여기서 레파지토리 연결
 	
 	// update
 	// http://localhost:8000/blog/dummy/user/1
