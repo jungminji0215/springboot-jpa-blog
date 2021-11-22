@@ -95,11 +95,6 @@
 				<version>1.2</version>
 			</dependency>	
 		<!-- 추가 라이브러리 종료 -->		
-		
-		<dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-        </dependency>
         
 	</dependencies>
 

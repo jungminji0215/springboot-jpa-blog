@@ -28,7 +28,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Entity 
-@Table(name = "users")
 public class User {
 	
 	// @id 붙이면 primary Key 가 됨 
@@ -40,6 +39,7 @@ public class User {
 	
 	// nullable = false:  null이 될수 없다
 	// length = 20 길이
+	// unique = true -> 중복 안 되게
 	@Column(nullable = false, length = 20, unique = true) 
 	private String username; // 네이버 아이디 뭐야? 할때 그 id
 	

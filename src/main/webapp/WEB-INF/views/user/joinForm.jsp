@@ -9,14 +9,14 @@
 		</div>
 
 		<div class="form-group">
-			<label for="pwd">비번:</label> <input type="password" class="form-control" placeholder="비번" id="pwd">
+			<label for="password">비번:</label> <input type="password" class="form-control" placeholder="비번" id="password">
 		</div>
 
 		<div class="form-group">
 			<label for="email">이메일:</label> <input type="email" class="form-control" placeholder="이메일" id="email">
 		</div>
-
 	</form>
+	
 	<button id="btn-save" class="btn btn-primary">회원가입</button>
 </div>
 
