@@ -15,4 +15,15 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	// 이렇게 하면 bean으로 등록이 되나요? ( bean으로 등록된다는 것은, 스프링 IoC에서 객체를 가지고 있나요?) 
 	// (bean으로 등록되면 우리가 필요할 때마다 DI를 할 수 있다.)
 	// 위에 대한 답변 -> 등록된다. (자동으로 bean 등록이 된다) 그래서 @Repository 생략할 수 있다.
+	
+	
+	// JPA Naming 전략
+	// findByUsernameAndPassword 이런 이름으로 함수 만들면 
+	// SLELCT * FROM user WHERE username = ? AND password = ?;  이런 쿼리가 동작함
+	// ?에는 파라미터로 들어온 애들이 들어감 
+	User findByUsernameAndPassword(String username, String password);
+	
+//	@Query(value="SLELCT * FROM user WHERE username = ?1 AND password = ?2", nativeQuery = true)
+//	User login(String username, String password);
+	
 }
