@@ -21,9 +21,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	// findByUsernameAndPassword 이런 이름으로 함수 만들면 
 	// SLELCT * FROM user WHERE username = ? AND password = ?;  이런 쿼리가 동작함
 	// ?에는 파라미터로 들어온 애들이 들어감 
-	User findByUsernameAndPassword(String username, String password);
+//	User findByUsernameAndPassword(String username, String password);
 	
-//	@Query(value="SLELCT * FROM user WHERE username = ?1 AND password = ?2", nativeQuery = true)
-//	User login(String username, String password);
 	
 }
