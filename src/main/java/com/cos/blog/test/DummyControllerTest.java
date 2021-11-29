@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -80,11 +80,11 @@ public class DummyControllerTest {
 	// JPA는 페이징하는 강력한 pageable 기능을 제공함 
 	// http://localhost:8000/blog/dummy/user?page=0 
 	@GetMapping("/dummy/user")
-	public List<User> pageList(@PageableDefault(size=2, sort="id", direction = Direction.DESC) Pageable pageable){
+	public Page<User> pageList(@PageableDefault(size=2, sort="id", direction = Sort.Direction.DESC) Pageable pageable){
 		// 2건씩, id로, DESC : id를  최신순으로 들고온다.
 		Page<User> pagingUser = userRepository.findAll(pageable);
 		List<User> users = pagingUser.getContent();
-		return users;
+		return pagingUser;
 	}
 
 	// select

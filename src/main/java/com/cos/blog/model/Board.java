@@ -46,8 +46,6 @@ public class Board {
 	// 그러면 용량이 많아짐
 	
 	// 조회수
-	// 처음에는 0이여야 한다.
-	@ColumnDefault("0")
 	private int count; 
 	
 	
